@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Glutor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="howtouse">How to enter details?</string>
+    <string name="deschowtouse">To enter the readings click on the specific circle button on the specific time , for entering the morning readings click on the cirlce button belonging to the morning button , Follow the same rule for entering the other readings. Once entered the button will turn green and show your readings. You can only change your Readings only on that particular day you can not change any readings other than the present day. </string>
+
+
+    <string name="howmanytimes">How many times should we Test the Sugar levels?</string>
+    <string name="deschowmanytimes">It would be great to test the blood sugar levels 4 times a day that is 2 hrs
+before breakfast in the morning  then the second measurement 2 hrs after
+breakfast. The third measurement at the evening before having dinner and
+the last measurement before sleeping.
+However the first two readings of the day will also suffice . </string>
+
+</resources>

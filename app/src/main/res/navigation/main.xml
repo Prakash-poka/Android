@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuHome">
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.example.glutor.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.glutor.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuData"
+        android:name="com.example.glutor.DataFragment"
+        android:label="Data"
+        tools:layout="@layout/fragment_data" />
+    <fragment
+        android:id="@+id/menuHelp"
+        android:name="com.example.glutor.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/menuLogout"
+        android:name="com.example.glutor.LogoutFragment"
+        android:label="LogOut"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

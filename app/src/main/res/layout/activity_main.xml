@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:transitionName="logo_image"
+        android:id="@+id/logoimage"
+        android:contentDescription="logo"/>
+
+    <TextView
+        android:id="@+id/welcomemsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:transitionName="logo_text"
+        android:text="Hello There, Welcome Back!"
+        android:textColor="#000"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/signinmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to continue"
+        android:layout_marginTop="16sp"
+        android:textSize="16sp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="16sp"
+        android:id="@+id/Signinlayout"
+       >
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailidedittext"
+        android:hint="Email-id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordedittext"
+            android:hint="Password"
+            android:layout_marginTop="4dp"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="Forgot Password?"
+            android:textColor="#000"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="right"
+            android:elevation="0dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:id="@+id/signinbutton"
+            android:background="#000"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:id="@+id/newuser"
+            android:text="New User Sign Up"
+            android:onClick="newclick"
+            android:textColor="#000"
+            android:elevation="0dp"
+            />
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/dotprogresssignIn"
+            app:alliance_animDuration="500"
+            android:layout_marginTop="16dp"
+            app:alliance_distanceMultiplier="4"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/red"
+            app:alliance_secondDotsColor="@color/yellow"
+            app:alliance_strokeWidth="2dp"
+            app:alliance_thirdDotsColor="@color/green"
+            android:visibility="invisible"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:id="@+id/Signuplayout"
+        android:layout_marginBottom="16sp"
+        android:visibility="gone">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/fullname">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/age"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/fullname">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="number"
+                android:maxLength="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Occupation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/occupation"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/fullname"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/age">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/occupation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Email - id"
+            android:layout_marginTop="8dp"
+            android:id="@+id/signupEmail">
+            <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Signuppassword"
+            android:hint="Password"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/signupEmail"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Signuppassword"
+            android:text="Sign Up"
+            android:id="@+id/signupbutton"
+            android:background="#000"
+            android:textColor="#fff"
+            android:layout_marginTop="4dp"
+            />
+
+        <Button
+            android:id="@+id/olduser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupbutton"
+            android:layout_marginTop="4dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:onClick="oldclick"
+            android:text="Already registered Sign IN"
+            android:textColor="#000" />
+
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/olduser"
+            android:layout_gravity="center"
+            android:id="@+id/dotprogresssignUp"
+            app:alliance_animDuration="500"
+            android:layout_marginTop="16dp"
+            app:alliance_distanceMultiplier="4"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/red"
+            app:alliance_secondDotsColor="@color/yellow"
+            app:alliance_strokeWidth="2dp"
+            android:layout_centerHorizontal="true"
+            app:alliance_thirdDotsColor="@color/green"
+            android:visibility="invisible"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

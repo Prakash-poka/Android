@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/normaltab"
+    android:layout_marginTop="4dp"
+    android:padding="8dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90 - 130"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/normalrange"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mg/dL"
+        android:textSize="16dp"
+        android:layout_toEndOf="@id/normalrange"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:text="Normal Range"
+        android:layout_below="@id/normalrange"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Month Data"
+        android:textSize="16sp"
+        android:layout_below="@id/normalrange"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/normaltab"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Blood Sugar"
+            android:id="@+id/textavg"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textavg"
+            android:id="@+id/lastmonthavg"
+            android:text="N/A"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days Tested"
+            android:id="@+id/daystested"
+            android:layout_below="@id/textavg"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/daystested"
+            android:id="@+id/lastmonthdaystested"
+            android:layout_below="@id/lastmonthavg"
+            android:text="N/A"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days Out of Normal Range"
+            android:id="@+id/baddaystext"
+            android:layout_below="@id/lastmonthdaystested"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/baddaystext"
+            android:id="@+id/baddadays"
+            android:layout_below="@id/lastmonthdaystested"
+            android:text="N/A"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visual Data"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"/>
+
+
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

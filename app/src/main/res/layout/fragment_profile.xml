@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:src="@drawable/profilebg" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/personalprofileimage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/manface"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="200dp"
+            android:layout_toEndOf="@id/personalprofileimage"
+            android:src="@drawable/ic_camera"
+            android:layout_marginStart="-56dp"
+            android:id="@+id/changeprofileimage"
+            app:tint="@color/teal_200" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personalprofileimage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileName"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Age"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileName"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="8dp"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAge"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Occupation"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/userOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAge"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="8dp"
+            android:text="Student"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userOccupation"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Last Month Avg"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lastmonthavg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userOccupation"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="8dp"
+            android:text="105 mg/dL"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastmonthavg"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Standard"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastmonthavg"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="8dp"
+            android:text="105 mg/dL"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
